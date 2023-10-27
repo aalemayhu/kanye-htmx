@@ -14,7 +14,7 @@ async function main () {
     const pageTitle = 'Today\'s words of wisdom from Kanye West';
 
     const htmlFile = fs.readFileSync('./index.html').toString();
-    const buildFile = htmlFile.replace('{QUOTE}', quote).replace('{TITLE}', pageTitle);
+    const buildFile = htmlFile.replace('{QUOTE}', quote).replace(/{TITLE}/g, pageTitle);
 
     if (!fs.existsSync('./dist')) {
         fs.mkdirSync('./dist');
