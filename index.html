@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Kanye Quote</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <style>
+        blockquote {
+            margin: 0;
+        }
+
+        blockquote p {
+            background: lightgrey;
+            max-width: 320px;
+            padding: 1rem;
+            border-radius: 0.9rem;
+        }
+
+        .page {
+            padding: 1rem;
+        }
+
+        .button-container {
+            padding-top: 0.5rem;
+            display: flex;
+            justify-content: right;
+            max-width: 320px;
+        }
+        .button-container button {
+            padding: 0.3rem;
+            background: aqua;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Kanye Quote</h1>
+        </header>
+        <main>
+            <blockquote cite="https://www.huxley.net/bnw/four.html">
+                <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+                <footer>—<cite>Kanye West</cite></footer>
+            </blockquote>
+        </main>
+
+        <div class="button-container">
+            <button hx-get="http://api.kanye.rest">Get quote</button>
+        </div>
+    </div>
+</body>
+</html>
