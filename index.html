@@ -40,10 +40,13 @@
         </header>
         <main>
             <blockquote cite="http://api.kanye.rest">
-                <p>{QUOTE}</p>
+                <p class="quote">{QUOTE}</p>
                 <footer>—<cite>Kanye West</cite></footer>
             </blockquote>
         </main>
+
+        <button hx-get="https://kanye-rest-403314.ew.r.appspot.com" hx-target=".quote">Get quote</button>
+
     </div>
 </body>
 </html>
