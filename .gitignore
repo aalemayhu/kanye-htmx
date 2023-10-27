@@ -1,2 +1,4 @@
 .idea
 kanye-htmx.iml
+dist
+node_modules
