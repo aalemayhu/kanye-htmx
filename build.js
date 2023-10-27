@@ -11,8 +11,10 @@ async function main () {
 
     const payload = await response.json();
     const quote = payload.quote;
+    const pageTitle = 'Today\'s words of wisdom from Kanye West';
+
     const htmlFile = fs.readFileSync('./index.html').toString();
-    const buildFile = htmlFile.replace('{QUOTE}', quote);
+    const buildFile = htmlFile.replace('{QUOTE}', quote).replace('{TITLE}', pageTitle);
 
     if (!fs.existsSync('./dist')) {
         fs.mkdirSync('./dist');
